@@ -17,6 +17,9 @@ jobs:
           node-version: 18
           # cache: bun
 
+      - name: setup-bun
+        uses: oven-sh/setup-bun@v1
+
       - name: bun-install
         run: bun install
 
