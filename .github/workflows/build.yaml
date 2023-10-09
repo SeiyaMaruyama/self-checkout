@@ -2,7 +2,7 @@ name: Build Test
 on:
   push:
     branches-ignore:
-      #- main
+      - main
       - develop
 jobs:
   build:
