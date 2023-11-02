@@ -6,7 +6,7 @@
 // import Image from 'next/image'
 import * as React from 'react';
 import { Button } from '@mui/material';
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 
 /*
 *
@@ -40,8 +40,7 @@ export default function Home() {
                         <Button
                             className="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
                             type="submit"
-                            component={Link}
-                            to="/select"
+                            //component={Link} to="app/select"
                         >
                             スタート
                         </Button>
