@@ -17,9 +17,12 @@ const SelectComponent = () => {
 
   useEffect(() => {
     const createMeasurement = async () => {
+      const audio = new Audio('public/Nice_Wake_Up.mp3');
+      audio.play();
+
       const measurement = await prisma.user.create({
         data: {
-          name: "Test User",
+          // name: "Test User",
           startTime: startTime,
           endTime: endTime,
           timeDiff: timeDiff,
