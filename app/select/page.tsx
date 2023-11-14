@@ -3,10 +3,43 @@
  * @see https://v0.dev/t/AC6YqcoATmG
  */
 
-import * as React from "react";
-import { Button } from "@mui/material"
+import React, { useState, useEffect } from 'react';
+import { PrismaClient } from '@prisma/client';
+import { Button } from "@mui/material";
 
-export default function Component() {
+const SelectComponent = () => {
+    const [startTime, setStartTime] = useState(0);
+    const [endTime, setEndTime] = useState(0);
+    const [timeDiff, setTimeDiff] = useState(0);
+    const [measurementId, setMeasurementId] = useState(0);
+
+    const prisma = new PrismaClient();
+
+    useEffect(async () => {
+        const measurement = await prisma.measurement.create({
+            data: {
+                startTime: startTime,
+                endTime: endTime,
+                timeDiff: timeDiff,
+            },
+        });
+        setMeasurementId(measurement.id);
+    }, [startTime, endTime, timeDiff]);
+
+    const handleClick = async () => {
+        setStartTime(Date.now());
+        setEndTime(Date.now());
+        setTimeDiff(endTime - startTime);
+        await prisma.measurement.update({
+            where: { id: measurementId },
+            update: {
+                startTime: startTime,
+                endTime: endTime,
+                timeDiff: timeDiff,
+            },
+        });
+    };
+
     return (
         <section className="container mx-auto px-4 md:px-8 py-8">
             <section className="w-full py-6">
@@ -57,7 +90,16 @@ export default function Component() {
                     <h2 className="font-semibold">Total</h2>
                     <h3 className="font-bold text-gray-900 dark:text-white">$0.00</h3>
                 </div>
+                <Button
+                    className="py-2 px-6 rounded-md bg-blue-500 text-white hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 dark:bg-blue-400 dark:hover:bg-blue-500 dark:focus:ring-blue-400"
+                    type="submit"
+                    variant="contained"
+                >
+                    Proceed to Checkout
+                </Button>
             </section>
         </section>
     )
 }
+
+export default SelectComponent;
