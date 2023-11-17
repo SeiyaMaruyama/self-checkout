@@ -5,7 +5,7 @@
 
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 // import prisma from "@/lib/prisma";
 import { Button } from "@mui/material";
 import Link from "next/link";
@@ -29,15 +29,15 @@ const SelectComponent = () => {
 
   // const prisma = new PrismaClient();
 
-  //useEffect(() => {
-  /*
-    const createMeasurement = async () => {
-      const audio = new Audio('public/Nice_Wake_Up.mp3');
+  useEffect(() => {
+    const playAudio = async () => {
+      const audio = new Audio("public/genre_tutorial.wav");
       await audio.play();
     };
-     */
-  //});
-  // , [startTime, time, prisma]);
+    playAudio().catch((error) =>
+      console.error("Audio playback failed:", error),
+    );
+  }, []);
 
   const addToCart = (product: Product, quantity: number = 1) => {
     setCart((currentCart) => {
