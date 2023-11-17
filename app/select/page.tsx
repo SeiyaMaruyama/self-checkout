@@ -10,7 +10,18 @@ import React, { useState } from "react";
 import { Button } from "@mui/material";
 import Link from "next/link";
 
+type Product = {
+  name: string;
+  price: number;
+}
+
+type CartItem = {
+  product: Product;
+  quantity: number;
+}
+
 const SelectComponent = () => {
+  const [cart, setCart] = useState<CartItem[]>([]);
   const [startTime, setStartTime] = useState(new Date());
   const [time, setTime] = useState<number>(0);
   // const [measurementId, setMeasurementId] = useState<string | null>(null);
@@ -26,6 +37,21 @@ const SelectComponent = () => {
      */
   //});
   // , [startTime, time, prisma]);
+
+  const addToCart = (product: Product, quantity: number = 1) => {
+    setCart((currentCart) => {
+      const itemInCart = currentCart.find((item) => item.product.name === product.name);
+      if (itemInCart) {
+        return currentCart.map((item) =>
+          item.product.name === product.name
+            ? { ...item, quantity: item.quantity + quantity }
+            : item
+        );
+      } else {
+        return [...currentCart, { product, quantity }];
+      }
+    });
+  };
 
   const handleClick = async () => {
     const endTime = new Date();
@@ -56,7 +82,7 @@ const SelectComponent = () => {
         <div className="border border-gray-200 p-4 rounded-lg dark:border-gray-800">
           <div className="flex items-center justify-between">
             <h2 className="font-semibold">きのこの山</h2>
-            <Button variant="outlined">カートに追加</Button>
+            <Button variant="outlined" onClick={() => addToCart({ name: 'きのこの山', price: 150 })}>カートに追加</Button>
           </div>
           <p className="text-gray-500 dark:text-gray-400">
             クラッカーのチョコ掛け
@@ -90,10 +116,19 @@ const SelectComponent = () => {
             <h2 className="font-semibold">カート</h2>
             <Button variant="contained">カートのリセット</Button>
           </div>
+          {/*
           <div className="mt-4">
             <p className="text-gray-500 dark:text-gray-400">
               カートは空です
             </p>
+          </div>
+          */}
+          <div className="mt-4">
+            {cart.map((item) => (
+              <p key={item.product.name}>
+                {item.product.name} - {item.quantity}個
+              </p>
+            ))}
           </div>
         </div>
         <div className="mt-4 bg-gray-100 p-4 rounded-lg dark:bg-gray-800">
