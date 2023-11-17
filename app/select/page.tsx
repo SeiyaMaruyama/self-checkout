@@ -18,16 +18,20 @@ const SelectComponent = () => {
   // const prisma = new PrismaClient();
 
   useEffect(() => {
+    /*
     const createMeasurement = async () => {
       const audio = new Audio('public/Nice_Wake_Up.mp3');
       await audio.play();
     };
+     */
   });
   // , [startTime, time, prisma]);
 
   const handleClick = async () => {
     const endTime = new Date();
-    // setStartTime(start);
+    // 後で修正
+    setStartTime(endTime);
+
     setTime(endTime.getTime() - startTime.getTime());
     await prisma.user.create({
       //where: { id: measurementId },
