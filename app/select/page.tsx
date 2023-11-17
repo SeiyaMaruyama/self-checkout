@@ -55,33 +55,33 @@ const SelectComponent = () => {
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
         <div className="border border-gray-200 p-4 rounded-lg dark:border-gray-800">
           <div className="flex items-center justify-between">
-            <h2 className="font-semibold">Product 1</h2>
-            <Button variant="outlined">Add to cart</Button>
+            <h2 className="font-semibold">きのこの山</h2>
+            <Button variant="outlined">カートに追加</Button>
           </div>
           <p className="text-gray-500 dark:text-gray-400">
-            Description of product 1
+            クラッカーのチョコ掛け
           </p>
-          <h3 className="font-bold text-gray-900 dark:text-white">$19.99</h3>
+          <h3 className="font-bold text-gray-900 dark:text-white">150円</h3>
         </div>
         <div className="border border-gray-200 p-4 rounded-lg dark:border-gray-800">
           <div className="flex items-center justify-between">
-            <h2 className="font-semibold">Product 2</h2>
-            <Button variant="outlined">Add to cart</Button>
+            <h2 className="font-semibold">たけのこの里</h2>
+            <Button variant="outlined">カートに追加</Button>
           </div>
           <p className="text-gray-500 dark:text-gray-400">
-            Description of product 2
+            ビスケットのチョコ掛け
           </p>
-          <h3 className="font-bold text-gray-900 dark:text-white">$29.99</h3>
+          <h3 className="font-bold text-gray-900 dark:text-white">150円</h3>
         </div>
         <div className="border border-gray-200 p-4 rounded-lg dark:border-gray-800">
           <div className="flex items-center justify-between">
-            <h2 className="font-semibold">Product 3</h2>
-            <Button variant="outlined">Add to cart</Button>
+            <h2 className="font-semibold">アルフォート</h2>
+            <Button variant="outlined">カートに追加</Button>
           </div>
           <p className="text-gray-500 dark:text-gray-400">
-            Description of product 3
+            ビスケットのチョコ掛け
           </p>
-          <h3 className="font-bold text-gray-900 dark:text-white">$39.99</h3>
+          <h3 className="font-bold text-gray-900 dark:text-white">150円</h3>
         </div>
       </div>
       <section className="w-full mt-8">
@@ -92,13 +92,13 @@ const SelectComponent = () => {
           </div>
           <div className="mt-4">
             <p className="text-gray-500 dark:text-gray-400">
-              No items in the cart.
+              カートは空です
             </p>
           </div>
         </div>
         <div className="mt-4 bg-gray-100 p-4 rounded-lg dark:bg-gray-800">
-          <h2 className="font-semibold">Total</h2>
-          <h3 className="font-bold text-gray-900 dark:text-white">$0.00</h3>
+          <h2 className="font-semibold">合計金額</h2>
+          <h3 className="font-bold text-gray-900 dark:text-white">0円</h3>
         </div>
         <Link href={"/"}>
           <Button
