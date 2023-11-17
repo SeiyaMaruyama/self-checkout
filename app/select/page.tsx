@@ -163,16 +163,18 @@ const SelectComponent = () => {
           <h2 className="font-semibold">合計金額</h2>
           <h3 className="font-bold text-gray-900 dark:text-white">{calculateTotal()}円</h3>
         </div>
-        <Link href={"/"}>
-          <Button
-            onClick={handleClick}
-            className="py-2 px-6 rounded-md bg-blue-500 text-white hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 dark:bg-blue-400 dark:hover:bg-blue-500 dark:focus:ring-blue-400"
-            type="submit"
-            variant="contained"
-          >
-            決済画面へ
-          </Button>
-        </Link>
+        <div className="mt-4 flex justify-end">
+          <Link href={"/"}>
+            <Button
+              onClick={handleClick}
+              className="py-2 px-6 rounded-md bg-blue-500 text-white hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 dark:bg-blue-400 dark:hover:bg-blue-500 dark:focus:ring-blue-400"
+              type="submit"
+              variant="contained"
+            >
+              決済画面へ
+            </Button>
+          </Link>
+        </div>
       </section>
     </section>
   );
