@@ -5,7 +5,7 @@
 
 "use client"
 
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import prisma from "@/lib/prisma";
 import { Button } from "@mui/material";
 import Link from "next/link";
@@ -17,14 +17,14 @@ const SelectComponent = () => {
 
   // const prisma = new PrismaClient();
 
-  useEffect(() => {
+  //useEffect(() => {
     /*
     const createMeasurement = async () => {
       const audio = new Audio('public/Nice_Wake_Up.mp3');
       await audio.play();
     };
      */
-  });
+  //});
   // , [startTime, time, prisma]);
 
   const handleClick = async () => {
