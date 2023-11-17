@@ -74,6 +74,10 @@ const SelectComponent = () => {
     setCart([]);
   };
 
+  const calculateTotal = () => {
+    return cart.reduce((total, item) => total + item.product.price * item.quantity, 0);
+  };
+
   const handleClick = async () => {
     const endTime = new Date();
     // 後で修正
@@ -147,9 +151,9 @@ const SelectComponent = () => {
           <div className="mt-4">
             {cart.map((item) => (
                 <div key={item.product.name}>
-                  <p>
+                  <div>
                     {item.product.name} - {item.quantity}個
-                  </p>
+                  </div>
                   <Button variant="outlined" onClick={() => removeFromCart(item.product)}>数量を減らす</Button>
                 </div>
             ))}
@@ -157,7 +161,7 @@ const SelectComponent = () => {
         </div>
         <div className="mt-4 bg-gray-100 p-4 rounded-lg dark:bg-gray-800">
           <h2 className="font-semibold">合計金額</h2>
-          <h3 className="font-bold text-gray-900 dark:text-white">0円</h3>
+          <h3 className="font-bold text-gray-900 dark:text-white">{calculateTotal()}円</h3>
         </div>
         <Link href={"/"}>
           <Button
