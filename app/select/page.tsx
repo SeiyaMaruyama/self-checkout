@@ -149,12 +149,12 @@ const SelectComponent = () => {
           </div>
           */}
           <div className="mt-4">
-            {cart.map((item) => (
-                <div key={item.product.name} className={"flex justify-between items-center"}>
+            {cart.map((item, index) => (
+                <div key={item.product.name} className={`flex flex-col justify-between items-start ${index < cart.length - 1 ? 'border-b border-gray-200' : ''}`}>
                   <p className="flex-grow">
                     {item.product.name} - {item.quantity}個
                   </p>
-                  <Button variant="outlined" onClick={() => removeFromCart(item.product)}>数量を減らす</Button>
+                  <Button className="mt-2" variant="outlined" onClick={() => removeFromCart(item.product)}>数量を減らす</Button>
                 </div>
             ))}
           </div>
