@@ -6,7 +6,7 @@
 "use client"
 
 import React, { useState } from "react";
-import prisma from "@/lib/prisma";
+// import prisma from "@/lib/prisma";
 import { Button } from "@mui/material";
 import Link from "next/link";
 
@@ -31,8 +31,10 @@ const SelectComponent = () => {
     const endTime = new Date();
     // 後で修正
     setStartTime(endTime);
+    setTime(time);
 
     setTime(endTime.getTime() - startTime.getTime());
+    /*
     await prisma.user.create({
       //where: { id: measurementId },
       data: {
@@ -40,6 +42,7 @@ const SelectComponent = () => {
         time: time,
       },
     });
+     */
   };
 
   return (
