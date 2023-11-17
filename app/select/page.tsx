@@ -150,10 +150,10 @@ const SelectComponent = () => {
           */}
           <div className="mt-4">
             {cart.map((item) => (
-                <div key={item.product.name}>
-                  <div>
+                <div key={item.product.name} className={"flex justify-between items-center"}>
+                  <p>
                     {item.product.name} - {item.quantity}個
-                  </div>
+                  </p>
                   <Button variant="outlined" onClick={() => removeFromCart(item.product)}>数量を減らす</Button>
                 </div>
             ))}
