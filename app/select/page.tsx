@@ -70,6 +70,10 @@ const SelectComponent = () => {
     });
   };
 
+  const resetCart = () => {
+    setCart([]);
+  };
+
   const handleClick = async () => {
     const endTime = new Date();
     // 後で修正
@@ -131,7 +135,7 @@ const SelectComponent = () => {
         <div className="bg-gray-100 p-4 rounded-lg dark:bg-gray-800">
           <div className="flex items-center justify-between">
             <h2 className="font-semibold">カート</h2>
-            <Button variant="contained">カートのリセット</Button>
+            <Button variant="contained" onClick={resetCart}>カートのリセット</Button>
           </div>
           {/*
           <div className="mt-4">
