@@ -53,6 +53,23 @@ const SelectComponent = () => {
     });
   };
 
+  const removeFromCart = (product: Product) => {
+    setCart((currentCart) => {
+      const itemInCart = currentCart.find((item) => item.product.name === product.name);
+      if (itemInCart && itemInCart.quantity > 1) {
+        return currentCart.map((item) =>
+            item.product.name === product.name
+                ? { ...item, quantity: item.quantity - 1 }
+                : item
+        );
+      } else if (itemInCart && itemInCart.quantity === 1) {
+        return currentCart.filter((item) => item.product.name !== product.name);
+      } else {
+        return currentCart;
+      }
+    });
+  };
+
   const handleClick = async () => {
     const endTime = new Date();
     // 後で修正
@@ -82,32 +99,32 @@ const SelectComponent = () => {
         <div className="border border-gray-200 p-4 rounded-lg dark:border-gray-800">
           <div className="flex items-center justify-between">
             <h2 className="font-semibold">きのこの山</h2>
-            <Button variant="outlined" onClick={() => addToCart({ name: 'きのこの山', price: 150 })}>カートに追加</Button>
+            <Button variant="outlined" onClick={() => addToCart({ name: 'きのこの山', price: 130 })}>カートに追加</Button>
           </div>
           <p className="text-gray-500 dark:text-gray-400">
             クラッカーのチョコ掛け
           </p>
-          <h3 className="font-bold text-gray-900 dark:text-white">150円</h3>
+          <h3 className="font-bold text-gray-900 dark:text-white">130円</h3>
         </div>
         <div className="border border-gray-200 p-4 rounded-lg dark:border-gray-800">
           <div className="flex items-center justify-between">
             <h2 className="font-semibold">たけのこの里</h2>
-            <Button variant="outlined">カートに追加</Button>
+            <Button variant="outlined" onClick={() => addToCart({ name: 'たけのこの里', price: 130 })}>カートに追加</Button>
           </div>
           <p className="text-gray-500 dark:text-gray-400">
             ビスケットのチョコ掛け
           </p>
-          <h3 className="font-bold text-gray-900 dark:text-white">150円</h3>
+          <h3 className="font-bold text-gray-900 dark:text-white">130円</h3>
         </div>
         <div className="border border-gray-200 p-4 rounded-lg dark:border-gray-800">
           <div className="flex items-center justify-between">
             <h2 className="font-semibold">アルフォート</h2>
-            <Button variant="outlined">カートに追加</Button>
+            <Button variant="outlined" onClick={() => addToCart({ name: 'アルフォート', price: 110 })}>カートに追加</Button>
           </div>
           <p className="text-gray-500 dark:text-gray-400">
             ビスケットのチョコ掛け
           </p>
-          <h3 className="font-bold text-gray-900 dark:text-white">150円</h3>
+          <h3 className="font-bold text-gray-900 dark:text-white">110円</h3>
         </div>
       </div>
       <section className="w-full mt-8">
@@ -125,9 +142,12 @@ const SelectComponent = () => {
           */}
           <div className="mt-4">
             {cart.map((item) => (
-              <p key={item.product.name}>
-                {item.product.name} - {item.quantity}個
-              </p>
+                <div key={item.product.name}>
+                  <p>
+                    {item.product.name} - {item.quantity}個
+                  </p>
+                  <Button variant="outlined" onClick={() => removeFromCart(item.product)}>数量を減らす</Button>
+                </div>
             ))}
           </div>
         </div>
