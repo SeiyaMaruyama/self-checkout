@@ -8,6 +8,7 @@
 import React, { useState, useEffect } from "react";
 import prisma from "@/lib/prisma";
 import { Button } from "@mui/material";
+import Link from "next/link";
 
 const SelectComponent = () => {
   const [startTime, setStartTime] = useState(new Date());
@@ -92,14 +93,16 @@ const SelectComponent = () => {
           <h2 className="font-semibold">Total</h2>
           <h3 className="font-bold text-gray-900 dark:text-white">$0.00</h3>
         </div>
-        <Button
-          onClick={handleClick}
-          className="py-2 px-6 rounded-md bg-blue-500 text-white hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 dark:bg-blue-400 dark:hover:bg-blue-500 dark:focus:ring-blue-400"
-          type="submit"
-          variant="contained"
-        >
-          決済画面へ
-        </Button>
+        <Link href={"/"}>
+          <Button
+            onClick={handleClick}
+            className="py-2 px-6 rounded-md bg-blue-500 text-white hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 dark:bg-blue-400 dark:hover:bg-blue-500 dark:focus:ring-blue-400"
+            type="submit"
+            variant="contained"
+          >
+            決済画面へ
+          </Button>
+        </Link>
       </section>
     </section>
   );
