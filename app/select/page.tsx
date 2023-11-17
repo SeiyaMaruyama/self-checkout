@@ -31,7 +31,7 @@ const SelectComponent = () => {
 
   useEffect(() => {
     const playAudio = async () => {
-      const audio = new Audio("public/genre_tutorial.wav");
+      const audio = new Audio("@/public/genre_tutorial.wav");
       await audio.play();
     };
     playAudio().catch((error) =>
