@@ -225,6 +225,51 @@ const SelectComponent = () => {
             </div>
           </>
         )}
+        {selectedTab === "野菜" && (
+          <>
+            <div className="border border-gray-200 p-4 rounded-lg dark:border-gray-800">
+              <div className="flex items-center justify-between">
+                <h2 className="font-semibold">レタス</h2>
+                <Button
+                  variant="outlined"
+                  onClick={() => addToCart({ name: "レタス", price: 110 })}
+                >
+                  カートに追加
+                </Button>
+              </div>
+              <p className="text-gray-500 dark:text-gray-400">
+                産地直送のレタス
+              </p>
+              <h3 className="font-bold text-gray-900 dark:text-white">110円</h3>
+            </div>
+            <div className="border border-gray-200 p-4 rounded-lg dark:border-gray-800">
+              <div className="flex items-center justify-between">
+                <h2 className="font-semibold">トマト</h2>
+                <Button
+                  variant="outlined"
+                  onClick={() => addToCart({ name: "トマト", price: 140 })}
+                >
+                  カートに追加
+                </Button>
+              </div>
+              <p className="text-gray-500 dark:text-gray-400">新鮮なトマト</p>
+              <h3 className="font-bold text-gray-900 dark:text-white">140円</h3>
+            </div>
+            <div className="border border-gray-200 p-4 rounded-lg dark:border-gray-800">
+              <div className="flex items-center justify-between">
+                <h2 className="font-semibold">かぼちゃ</h2>
+                <Button
+                  variant="outlined"
+                  onClick={() => addToCart({ name: "かぼちゃ", price: 200 })}
+                >
+                  カートに追加
+                </Button>
+              </div>
+              <p className="text-gray-500 dark:text-gray-400">冬至に食べよう</p>
+              <h3 className="font-bold text-gray-900 dark:text-white">200円</h3>
+            </div>
+          </>
+        )}
       </div>
       <section className="w-full mt-8">
         <div className="bg-gray-100 p-4 rounded-lg dark:bg-gray-800">
