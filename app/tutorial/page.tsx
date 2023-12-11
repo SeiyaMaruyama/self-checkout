@@ -20,9 +20,7 @@ export default function Component() {
         </li>
         <li className="bg-gray-200 dark:bg-gray-800 p-4 rounded">
           カート内の商品のうち、数を減らしたいものは「数量を減らす」ボタンで減らす
-          <br>
-            (「カートのリセット」ボタンで、カートから商品を全て取り除けます)
-          </br>
+          (「カートのリセット」ボタンで、カートから商品を全て取り除けます)
         </li>
         <li className="bg-gray-200 dark:bg-gray-800 p-4 rounded">
           画面右下の「決済画面へ」ボタンで決済へ進む
