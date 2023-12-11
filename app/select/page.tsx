@@ -145,7 +145,7 @@ const SelectComponent = () => {
               <div className="flex items-center justify-between">
                 <h2 className="font-semibold">きのこの山</h2>
                 <Button
-                  variant="cantained"
+                  variant="contained"
                   onClick={() => addToCart({ name: "きのこの山", price: 130 })}
                 >
                   カートに追加
@@ -160,7 +160,7 @@ const SelectComponent = () => {
               <div className="flex items-center justify-between">
                 <h2 className="font-semibold">たけのこの里</h2>
                 <Button
-                  variant="cantained"
+                  variant="contained"
                   onClick={() =>
                     addToCart({ name: "たけのこの里", price: 130 })
                   }
