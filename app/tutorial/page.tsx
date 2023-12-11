@@ -13,7 +13,7 @@ export default function Component() {
       </div>
       <ol className="list-decimal list-inside space-y-4 text-lg text-gray-700 dark:text-gray-300">
         <li className="bg-gray-200 dark:bg-gray-800 p-4 rounded">
-          商品の種類(お菓子、お肉、野菜)を画面最上部から選択
+          商品の種類(お菓子、お肉、野菜)を画面上部にあるボタンから選択
         </li>
         <li className="bg-gray-200 dark:bg-gray-800 p-4 rounded">
           欲しい商品は「カートに追加」ボタンで追加
