@@ -3,7 +3,7 @@
  * @see https://v0.dev/t/AC6YqcoATmG
  */
 
-// "use client";
+"use client";
 
 import React, { useState, useEffect } from "react";
 // import prisma from "@/lib/prisma";
