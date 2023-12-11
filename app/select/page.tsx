@@ -108,7 +108,11 @@ const SelectComponent = () => {
     <section className="container mx-auto px-4 md:px-8 py-8">
       <div className="w-full flex justify-start space-x-4 overflow-x-auto pb-2 border-b-2">
         <button
-          className="py-2 px-4 rounded-lg bg-gray-200 dark:bg-gray-700"
+          className={`py-2 px-4 rounded-lg ${
+            selectedTab === "お菓子"
+              ? "bg-blue-200 dark:bg-blue-700"
+              : "bg-gray-200 dark:bg-gray-700"
+          }`}
           onClick={() => setSelectedTab("お菓子")}
         >
           お菓子
