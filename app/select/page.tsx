@@ -118,13 +118,21 @@ const SelectComponent = () => {
           お菓子
         </button>
         <button
-          className="py-2 px-4 rounded-lg bg-gray-200 dark:bg-gray-700"
+          className={`py-2 px-4 rounded-lg ${
+            selectedTab === "お肉"
+              ? "bg-blue-200 dark:bg-blue-700"
+              : "bg-gray-200 dark:bg-gray-700"
+          }`}
           onClick={() => setSelectedTab("お肉")}
         >
           お肉
         </button>
         <button
-          className="py-2 px-4 rounded-lg bg-gray-200 dark:bg-gray-700"
+          className={`py-2 px-4 rounded-lg ${
+            selectedTab === "野菜"
+              ? "bg-blue-200 dark:bg-blue-700"
+              : "bg-gray-200 dark:bg-gray-700"
+          }`}
           onClick={() => setSelectedTab("野菜")}
         >
           野菜
