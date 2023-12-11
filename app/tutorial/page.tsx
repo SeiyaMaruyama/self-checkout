@@ -13,13 +13,14 @@ export default function Component() {
       </div>
       <ol className="list-decimal list-inside space-y-4 text-lg text-gray-700 dark:text-gray-300">
         <li className="bg-gray-200 dark:bg-gray-800 p-4 rounded">
-          商品のジャンルを画面最上部から選択
+          商品の種類(お菓子、お肉、野菜)を画面最上部から選択
         </li>
         <li className="bg-gray-200 dark:bg-gray-800 p-4 rounded">
           欲しい商品は「カートに追加」ボタンで追加
         </li>
         <li className="bg-gray-200 dark:bg-gray-800 p-4 rounded">
           カート内の商品のうち、数を減らしたいものは「数量を減らす」ボタンで減らす
+          \n(「カートのリセット」ボタンで、カートから商品を全て取り除けます)
         </li>
         <li className="bg-gray-200 dark:bg-gray-800 p-4 rounded">
           画面右下の「決済画面へ」ボタンで決済へ進む
