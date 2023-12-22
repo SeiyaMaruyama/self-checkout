@@ -1,8 +1,3 @@
-/**
- * v0 by Vercel.
- * @see https://v0.dev/t/AC6YqcoATmG
- */
-
 "use client";
 
 import React, { useState, useEffect } from "react";
