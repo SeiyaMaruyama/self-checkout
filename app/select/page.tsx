@@ -143,7 +143,7 @@ const SelectComponent = () => {
                   variant="contained"
                   onClick={() => addToCart({ name: "きのこの山", price: 130 })}
                 >
-                  カートに追加
+                  買い物かごに追加
                 </Button>
               </div>
               <p className="text-gray-500 dark:text-gray-400">
@@ -160,7 +160,7 @@ const SelectComponent = () => {
                     addToCart({ name: "たけのこの里", price: 130 })
                   }
                 >
-                  カートに追加
+                  買い物かごに追加
                 </Button>
               </div>
               <p className="text-gray-500 dark:text-gray-400">
@@ -177,7 +177,7 @@ const SelectComponent = () => {
                     addToCart({ name: "アルフォート", price: 110 })
                   }
                 >
-                  カートに追加
+                  買い物かごに追加
                 </Button>
               </div>
               <p className="text-gray-500 dark:text-gray-400">
@@ -196,7 +196,7 @@ const SelectComponent = () => {
                   variant="contained"
                   onClick={() => addToCart({ name: "牛バラ肉", price: 200 })}
                 >
-                  カートに追加
+                  買い物かごに追加
                 </Button>
               </div>
               <p className="text-gray-500 dark:text-gray-400">牛のバラ肉</p>
@@ -211,7 +211,7 @@ const SelectComponent = () => {
                     addToCart({ name: "豚こま切れ肉", price: 180 })
                   }
                 >
-                  カートに追加
+                  買い物かごに追加
                 </Button>
               </div>
               <p className="text-gray-500 dark:text-gray-400">豚のこま切れ肉</p>
@@ -224,7 +224,7 @@ const SelectComponent = () => {
                   variant="contained"
                   onClick={() => addToCart({ name: "手羽先", price: 130 })}
                 >
-                  カートに追加
+                  買い物かごに追加
                 </Button>
               </div>
               <p className="text-gray-500 dark:text-gray-400">鶏の手羽先</p>
@@ -241,7 +241,7 @@ const SelectComponent = () => {
                   variant="contained"
                   onClick={() => addToCart({ name: "レタス", price: 110 })}
                 >
-                  カートに追加
+                  買い物かごに追加
                 </Button>
               </div>
               <p className="text-gray-500 dark:text-gray-400">
@@ -256,7 +256,7 @@ const SelectComponent = () => {
                   variant="contained"
                   onClick={() => addToCart({ name: "トマト", price: 140 })}
                 >
-                  カートに追加
+                  買い物かごに追加
                 </Button>
               </div>
               <p className="text-gray-500 dark:text-gray-400">新鮮なトマト</p>
@@ -269,7 +269,7 @@ const SelectComponent = () => {
                   variant="contained"
                   onClick={() => addToCart({ name: "かぼちゃ", price: 200 })}
                 >
-                  カートに追加
+                  買い物かごに追加
                 </Button>
               </div>
               <p className="text-gray-500 dark:text-gray-400">冬至に食べよう</p>
@@ -283,7 +283,7 @@ const SelectComponent = () => {
           <div className="flex items-center justify-between">
             <h2 className="font-semibold">カート</h2>
             <Button variant="contained" color="error" onClick={resetCart}>
-              カートのリセット
+              買い物かごのリセット
             </Button>
           </div>
           {/*
