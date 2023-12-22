@@ -1,7 +1,3 @@
-/**
- * v0 by Vercel.
- * @see https://v0.dev/t/6IqY3vS7jUP
- */
 import { Button } from "@mui/material";
 import Link from "next/link";
 
