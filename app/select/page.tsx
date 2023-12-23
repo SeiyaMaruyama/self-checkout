@@ -143,7 +143,7 @@ const SelectComponent = () => {
                   variant="contained"
                   onClick={() => addToCart({ name: "きのこの山", price: 130 })}
                 >
-                  買い物かごに追加
+                  買い物かごに1つ追加
                 </Button>
               </div>
               <p className="text-gray-500 dark:text-gray-400">
