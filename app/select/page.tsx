@@ -283,7 +283,7 @@ const SelectComponent = () => {
           <div className="flex items-center justify-between">
             <h2 className="font-semibold">カート</h2>
             <Button variant="contained" color="error" onClick={resetCart}>
-              買い物かごのリセット
+              買い物かごを空にする
             </Button>
           </div>
           {/*
