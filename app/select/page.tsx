@@ -281,7 +281,7 @@ const SelectComponent = () => {
       <section className="w-full mt-8">
         <div className="bg-gray-100 p-4 rounded-lg dark:bg-gray-800">
           <div className="flex items-center justify-between">
-            <h2 className="font-semibold">カート</h2>
+            <h2 className="font-semibold">買い物かご</h2>
             <Button variant="contained" color="error" onClick={resetCart}>
               買い物かごを空にする
             </Button>
